@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Математическая статистика</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/serif.css" id="theme">
+		<link rel="stylesheet" href="custom.css">
+		
+		<script src="
+https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
+"></script>
+
+
+		<script type="text/javascript" src="js/main.js"></script>
+		
+		<!--<link rel="stilesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">-->
+		
+		
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<style>
+			.left{
+				float:left;
+			}
+			.right{
+				float:right;
+			}
+			.clear{
+				clear:both;
+			}
+			.tr{width: 20%; height:50%;}
+			#sub{
+				width: 40%; height:80%;background-color:rgb(157, 202, 176);font-size: 20pt;
+			}
+			#karp1{
+				width: 100%;
+			}
+			#karp2{
+				width: 70%;
+			}
+			/*#game_matrix table td{
+				border: 1px solid black;
+				cursor:pointer;
+				width: 100px;
+				height: 100px;
+			}
+			#game_matrix #name{
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				font-size:18px;
+			}
+			#game_matrix #find{
+				width: 100%;
+				height: 120px;
+				line-height: 120px;
+				border: 1px solid black;
+			}
+			#game_matrix #start{
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				font-size: 18px;
+				color:black;
+				background-color: coral;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown class="center">
+					<script type="text/template">
+					Математическая статистика
+					=============
+					</script>
+				</section>
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Выборка
+						Часть генеральной совокупности элементов, которая охватывается экспериментом (наблюдением, опросом).
+					</script>
+				</section>
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						Один из способов ответить на эти вопросы — собрать данные о каждом отдельном человеке.
+						 Однако это слишком дорого и требует много времени, поэтому исследователи 
+						вместо этого берут выборку населения, чтобы делать выводы о населении в целом.
+					</script>
+				</section>
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						
+						<img src="1.png" alt="2">
+					</script>
+				</section>
+
+
+
+                <section data-markdown class="center">
+					<script type="text/template">
+                         ### Выборочная средняя
+					</script>
+				</section>
+
+
+                <section data-markdown class="center">
+					<script type="text/template">
+						Выборочное сре́днее — это приближение теоретического среднего распределения, основанное на выборке из него.
+                        
+						<img src="2.svg" alt="2">
+					</script>
+				</section>
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Пример 1
+						По результатам выборочного исследования  рабочих цеха были установлены их квалификационные разряды:
+						 4, 5, 6, 4, 4, 2, 3, 5, 4, 4, 5, 2, 3, 3, 4, 5, 5, 2, 3, 6, 5, 4, 6, 4, 3.
+						Теперь нам требуется: вычислить выборочную среднюю.
+                        
+					</script>
+				</section>
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Решение
+						Если нам даны первичные данные (исходные необработанные значения), то их можно тупо просуммировать и разделить результат на объём выборки:
+
+						<img src="3.gif" alt="2">
+						
+					</script>
+				</section>
+
+
+                <section data-markdown class="center">
+					<script type="text/template">
+                         ### Медиана выборки
+					</script>
+				</section>
+
+                <section data-markdown class="center">
+					<script type="text/template">
+						Медиана набора чисел — это число, которое находится в середине этого набора, если его упорядочить по возрастанию.
+						Другое равносильное определение: медиана набора чисел — это число, сумма расстояний (или, если более строго, модулей) от которого до всех
+						 чисел из набора минимальна.
+
+					</script>
+				</section>
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Рассмотрим пример 1, но найдём медиану
+						Если даны первичные данные, то сортируем их по возрастанию либо убыванию (см. пример 1) и находим середину ранжированного ряда:
+
+						<img src="4.gif" alt="2">
+						
+					</script>
+				</section>
+
+				<section data-markdown class="center">
+					<script type="text/template">
+                         ### Мода выборки
+					</script>
+				</section>
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						Модой выборки называется значение, которое встречается большее число раз в выборке.Например, в наборе значений 
+						1 2 3 4 5 6 7 8 9 3 6 6 модой является число 6, поскольку оно встречается три раза.
+
+					</script>
+				</section>
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Рассмотрим пример 1, но найдём моду
+						В данном случае <br> $M=x(3)=4$, Моду легко отыскать по таблице, и ещё легче на полигоне частот – это абсцисса самой высокой точки:
+
+						<img src="5.jpg" alt="2">
+						
+					</script>
+				</section>
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+                         ### Минимум, максимум и размах выборки
+					</script>
+				</section>
+                
+                <section data-markdown class="center">
+					<script type="text/template">
+						Минимум и максимум выборки - это соответственно наименьшее и наибольшее значение изучаемой переменной.
+						 Разность между максимумом и минимумо называется размахом выборки. Все данные выборки расположены в промежутке между минимумом 
+						 и максимумом. Эти показатели как бы очерчивают границы выборки.
+					</script>
+				</section>
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Рассмотрим пример 1, но найдём минимум максимум и размах выборки.
+						Рассположим числа в порядке возрастания: 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6.
+						
+						Минимум = 2,
+						Максимум = 6,
+						Размах = 4.
+						
+					</script>
+				</section>
+
+					</script>
+				</section>
+
+
+                <section data-markdown class="center">
+					<script type="text/template">
+                         ### Дисперсия
+					</script>
+				</section>
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						Дисперсия выборки Дисперсия – это показатель вариации, который представляет собой средний квадрат отклонений от математического ожидания.
+						Таким образом, он выражает разброс чисел относительно среднего значения.
+
+						<img src="6.gif" alt="2">
+						
+					</script>
+				</section>
+
+				
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						
+						### Пример 
+						<img src="7.jpg" alt="2">
+					<br>
+					Решение
+					<br>
+						<img src="8.jpg" alt="2">
+						
+					</script>
+				</section>
+
+
+
+                <section data-markdown class="center">
+					<script type="text/template">
+                         ### Нормальное распределение
+					</script>
+				</section>
+
+
+                <section data-markdown class="center">
+					<script type="text/template">
+                        Нормальное распределение — это статистическое явление, представляющее собой симметричную колоколообразную кривую. 
+						Большинство значений расположены вблизи среднего значения; также лишь немногие появляются на левом и правом хвостах.
+					</script>
+				</section>
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						
+						### Пример 
+					
+						Распределение роста мужчин в США примерно нормальное со средним значением 70 дюймов и стандартным отклонением 3 дюйма.
+
+						Гистограмма роста всех мужчин США имеет форму колокола:
+						<br><img src="9.png" alt="2">
+						
+					</script>
+				</section>
+
+
+                
+
+					</script>
+				</section>
+
+
+
+
+              
+					
+
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+                <section data-markdown class="center">
+					<script type="text/template">
+						<button onclick="подброситьМонетку()">Подбросить монетку</button>
+<p id="результат"></p>
+<p id="подсказка"></p>
+
+
+					</script>
+
+				</section>
+
+
+				
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+					Диаграмма
+					<canvas id="chart"></canvas>
+					
+					
+					</script>
+					</section>
+
+
+
+
+
+
+
+
+
+
+					<section data-markdown class="center">
+						<script type="text/template">
+							<button onclick="chisla()">Рассчитать</button>
+							<p id="min">Минимум:</p>
+							<p id="max">Максимум:</p>
+							<p id="median">Медиана:</p>
+							<p id="mode">Мода:</p>
+							<p id="range">Размах:</p>
+							<p id="variance">Дисперсия:</p>
+							<p id="mean">Выборочная средняя:</p>
+						
+    
+    
+   
+    
+
+							<input type="text" id="chisla" placeholder="Числа">
+						</script>
+						</section>
+	
+
+
+
+
+
+
+				
+
+
+
+				
+				<section data-markdown class="center">
+					<script type="text/template">
+						Математическое ожидание и Дисперсия
+						
+					</script>
+				</section>
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						Математическим ожиданием. М (Х) дискретной величины называют сумму произведений всех её возможных значений, умноженных на 
+						их вероятности. Дисперсией (рассеянием). D (Х) случайной величины называют математическое ожидание квадрата отклонения случайной
+						 величины от её математического ожидания. Средним квадратичным отклонением случайной величины. Х называют квадратный корень из дисперсии D (Х).
+
+						
+					</script>
+				</section>
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Пример
+						<br><img src="11.jpg" width="250" height="250" id="karp1" alt="kar1">
+						
+					</script>
+				</section>
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Решение
+						<br><img src="10.jpg" width="250" height="250" id="karp1" alt="kar1">
+					</script>
+				</section>
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Пример
+						<br><img src="12.jpg" width="250" height="250" id="karp1" alt="kar1">
+						
+					</script>
+				</section>
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Решение
+						<br><img src="13.jpg" width="500" height="500" id="karp1" alt="kar1">
+					</script>
+				</section>
+
+
+
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Пример
+						Баскетболист попадает в корзину с вероятностью 0,7. Найдите математическое ожидание числа попаданий при 50 бросках.
+						
+					</script>
+				</section>
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Решение
+						Так как вероятность попадания в корзину равна 0,7 значит, в среднем из 10 бросков будет 7 попаданий. Соответственно, из 50 бросков, будет в среднем 5*7=35 попаданий.
+						<br>Значит, математическое ожидание числа попаданий при 50 бросках равно 35.
+
+					</script>
+				</section>
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Пример
+						Василий пытается отправить СМС в условиях слабой мобильной связи. Телефон делает попытки отправить СМС до тех пор, пока это не удастся. 
+						Известно, что вероятность удачной попытки равна 0,05 независимо от предыдущих попыток. Найдите математическое ожидание числа
+						 сделанных попыток.
+						
+					</script>
+				</section>
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Решение
+						По условию вероятность отправки СМС равна 0,05. Это значит, что из 100 попыток отправить СМС в среднем удачными 
+						окажутся 5. То есть, чтобы отправить 1 СМС нужно сделать в среднем 20 попыток. Значит, математическое ожидание числа сделанных попыток равно 20.
+
+					</script>
+				</section>
+
+
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Пример
+						Найдите математическое ожидание случайной величины S "число неудач" в серии из 16 испытаний Бернулли с
+						 вероятностью успеха 0,3 в одном испытании.
+						
+					</script>
+				</section>
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Решение
+						Вероятность неудачи равна 1 - 0,3 = 0,7. Это значит, что в среднем из 10 испытаний 7 окажутся неудачными. То есть в среднем неудачными
+						 окажутся 7/10 всех испытаний. Соответственно, из 16 испытаний неудачными окажутся 7/10 * 16 = 11,2 испытаний.
+<br>Значит, математическое ожидание случайной величины равна 11,2
+					</script>
+				</section>
+
+
+
+
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Пример
+						Игральную кость бросают 5 раз. Найдите математическое ожидание суммы выпавших очков.
+						
+					</script>
+				</section>
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						### Решение
+						Математическое ожидание  числа очков, выпавших на игральной кости при каждом броске равно 3,5. 
+						Математическое ожидание суммы выпавших очков равно сумме математических ожиданий числа очков при каждом броске. Это значит, 
+						что математическое ожидание суммы выпавших очков равно 3,5 * 5 = 17,5.
+					</script>
+				</section>
+
+
+
+
+
+
+				
+				<section data-markdown class="center">
+					<script type="text/template">
+						<img src="2.jpg" width="500" height="500" id="karp1" alt="kar1" >
+					</script>
+				</section>
+				<section data-markdown class="center">
+					<script type="text/template">
+						<img src="3.jpg" width="500" height="500" id="karp1" alt="kar2">
+					</script>
+				</section>
+				<section data-markdown class="center">
+					<script type="text/template">
+						<img src="AHAHAHAHAHAHAHAH.jpg" width="500" height="500" id="karp2" alt="kar3">
+					</script>
+				</section>
+				
+				</section>
+				
+			
+
+
+
+
+
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<style>
+.salute {
+animation-duration: 5s; /* Длительность анимации */
+animation-name: rubberBand; /* Название анимации из Animate.css */
+}
+</style>
+
+
+
+
+<div class="slide"></div>
+
+
+<div class="slide salute">Cпасибо за просмотр</div>
+
+</script>
+
+
+					
+					</script>
+				</section>
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+					</script>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+
+		<script>
+			Reveal.initialize({
+				hash: true,
+				center: false,
+				slideNumber: true,
+				controls:true,
+				
+				
+				// save slide
+				history: true,
+				slideNumber: true,
+				touch: true,
+				menu: {
+					side: 'left', //Расположение меню
+					numbers: true, //Нумерация слайдов
+					markers: true, //Маркер посещения
+					titleSelector: 'h1, h2, h3, h4, h5, h6', //Заголовки, отображаемые в меню
+					useTextContentForMissingTitles: true, //Если заголовка нет, то подставляем первые слова слайда
+					hideMissingTitles: false, //Если заголовка нет, то скрываем слайд из меню
+					transitions: true, //Установить меню анимации
+					openButton: true, //Скрыть кнопку меню
+					keyboard: true, //Открытие меню по кнопке m
+				},
+				dependencies:[
+					{
+						scr:'plugin/menu/menu.js'
+					},{ 
+						//Menu
+						src: 'plugin/menu/menu.js',
+						async: true
+					}
+				],
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+			});
+		</script>
+		
+	</body>
+</html>

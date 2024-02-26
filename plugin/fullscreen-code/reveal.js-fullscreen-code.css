@@ -1,0 +1,50 @@
+/* fullscreen class for code element */
+pre code.fullscreen{
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: red;
+}
+pre {
+    position: relative;
+}
+pre code {
+    position: relative;
+}
+pre .fullscreen-button{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* additional box */
+div#fullscreen-box {
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+div#fullscreen-box pre,
+div#fullscreen-box code {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+div#fullscreen-box pre{
+    overflow: hidden;
+}
+div#fullscreen-box pre code{
+    overflow: auto;
+}
+div#fullscreen-box.visible{
+    display: block;
+}
