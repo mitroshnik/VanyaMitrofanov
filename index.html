@@ -77,7 +77,7 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 				<section data-markdown class="center">
 					<script type="text/template">
 					Математическая статистика
-					=============
+					----------
 					</script>
 				</section>
 				<section data-markdown class="center">
@@ -116,8 +116,7 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
                 <section data-markdown class="center">
 					<script type="text/template">
 						Выборочное сре́днее — это приближение теоретического среднего распределения, основанное на выборке из него.
-                        
-						<img src="2.svg" alt="2">
+						$\newline\overline X=\frac{1}{n}\displaystyle\sum_{i=1}^{n} X_i$	
 					</script>
 				</section>
 
@@ -136,8 +135,7 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 					<script type="text/template">
 						### Решение
 						Если нам даны первичные данные (исходные необработанные значения), то их можно тупо просуммировать и разделить результат на объём выборки:
-
-						<img src="3.gif" alt="2">
+						$\newline\overline x_{e}=\frac{4+5+6+\ldots+4+3}{25}=\frac{101}{25}=4.04\approx 4$
 						
 					</script>
 				</section>
@@ -163,8 +161,7 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 					<script type="text/template">
 						### Рассмотрим пример 1, но найдём медиану
 						Если даны первичные данные, то сортируем их по возрастанию либо убыванию (см. пример 1) и находим середину ранжированного ряда:
-
-						<img src="4.gif" alt="2">
+						$\newline m_e = x_{13} = 4$
 						
 					</script>
 				</section>
@@ -238,8 +235,8 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 					<script type="text/template">
 						Дисперсия выборки Дисперсия – это показатель вариации, который представляет собой средний квадрат отклонений от математического ожидания.
 						Таким образом, он выражает разброс чисел относительно среднего значения.
-
-						<img src="6.gif" alt="2">
+						$\newline D(x)=M[(X-M(X))^2]$
+						
 						
 					</script>
 				</section>
@@ -252,11 +249,13 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 					<script type="text/template">
 						
 						### Пример 
-						<img src="7.jpg" alt="2">
-					<br>
-					Решение
-					<br>
-						<img src="8.jpg" alt="2">
+						Вычислите дисперсию ряда чисел:
+						$а) 6,8,10,12,9;$
+						$\newlineб) -4,-1,-2,7,5,4;$
+						### Решение
+						$а) \frac{6+8+10+12+9}{5}=9; \frac{3^2+1^2+1^2+3^2+0^2}{5}=4$
+						$\newlineб) \frac{-4-1-2+7+5+4}{6}\approx 2; \frac{6^2+3^2+4^2+5^2+2^2}{6}=15.$
+						
 						
 					</script>
 				</section>
@@ -405,8 +404,10 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 				<section data-markdown class="center">
 					<script type="text/template">
 						### Пример
-						<br><img src="11.jpg" width="250" height="250" id="karp1" alt="kar1">
-						
+						Случайная величина $Z$ задана распределением:
+						<br><img src="11.jpg" width="100" height="100" id="karp1" alt="kar1">
+						1. Сколько значений принимает случайная величина $Z^2$?
+						2. Найдите математическое ожидание случайной величины $Z^2.$
 					</script>
 				</section>
 
@@ -415,7 +416,17 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 				<section data-markdown class="center">
 					<script type="text/template">
 						### Решение
-						<br><img src="10.jpg" width="250" height="250" id="karp1" alt="kar1">
+						Составим таблицу распределения случайной величины $Z^2:$
+						<br><img src="10.png" width="100" height="100" id="karp1" alt="kar1">
+						1. Случайная величина $Z^2$ принимает значения 0; 1; 4; 9, то есть всего 4 значения.
+					</script>
+				</section>
+
+				<section data-markdown class="center">
+					<script type="text/template">
+						<br><img src="10.png" width="100" height="100" id="karp1" alt="kar1">
+						<br>2. Найдём математическое ожидание случайной величины $Z^2:$
+						$\newline E(Z^2)=9\cdot(0.1+0.2)+4\cdot(0.2+0.15)+1\cdot0.2=4.3$
 					</script>
 				</section>
 
@@ -424,7 +435,9 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 				<section data-markdown class="center">
 					<script type="text/template">
 						### Пример
-						<br><img src="12.jpg" width="250" height="250" id="karp1" alt="kar1">
+						В торговом центре установлены два автомата, продающие кофе. С вероятностью $p=0.11$ к вечеру
+						в первом автомате заканчивается кофе. Во втором автомате кофе заканчивается к вечеру с вероятностю
+						$p=0.14.$ Найдите математическое ожидание числа автоматов, в которых к вечеру закончится кофе.
 						
 					</script>
 				</section>
@@ -433,20 +446,33 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 
 				<section data-markdown class="center">
 					<script type="text/template">
-						### Решение
-						<br><img src="13.jpg" width="500" height="500" id="karp1" alt="kar1">
+						### Решение 
+						$x_1=0$ - "кофе не закончится".
+						$\newline p_1=(1-0.11)(1-0.14)=0.89\cdot0.86$
+						$\newline x_2=1$ - "кофе закончится в только первом или во втором автомате".
+						$\newline p_2 = 0.11\cdot(1-0.14)+0.14\cdot(1-0.11)=0.2192$
+						
 					</script>
 				</section>
 
 
-
+				<section data-markdown class="center">
+					<script type="text/template">
+						
+						$\newline x_3=2$ - "кофе закончится в первом и во втором автомате".
+						$\newline p_3=0.11\cdot0.14=0.0154\newline$
+						Найдём математическое ожидание:
+						$\newline0\cdot0.89\cdot0.86+1\cdot0.2192+2\cdot0.0154=0.25$
+						
+					</script>
+				</section>
 
 
 
 				<section data-markdown class="center">
 					<script type="text/template">
 						### Пример
-						Баскетболист попадает в корзину с вероятностью 0,7. Найдите математическое ожидание числа попаданий при 50 бросках.
+						Баскетболист попадает в корзину с вероятностью $\small0.7$. Найдите математическое ожидание числа попаданий при 50 бросках.
 						
 					</script>
 				</section>
@@ -456,7 +482,7 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 				<section data-markdown class="center">
 					<script type="text/template">
 						### Решение
-						Так как вероятность попадания в корзину равна 0,7 значит, в среднем из 10 бросков будет 7 попаданий. Соответственно, из 50 бросков, будет в среднем 5*7=35 попаданий.
+						Так как вероятность попадания в корзину равна $\small0.7$ значит, в среднем из 10 бросков будет 7 попаданий. Соответственно, из 50 бросков, будет в среднем 5$\cdot$7=35 попаданий.
 						<br>Значит, математическое ожидание числа попаданий при 50 бросках равно 35.
 
 					</script>
@@ -468,7 +494,7 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 					<script type="text/template">
 						### Пример
 						Василий пытается отправить СМС в условиях слабой мобильной связи. Телефон делает попытки отправить СМС до тех пор, пока это не удастся. 
-						Известно, что вероятность удачной попытки равна 0,05 независимо от предыдущих попыток. Найдите математическое ожидание числа
+						Известно, что вероятность удачной попытки равна $\small0.05$ независимо от предыдущих попыток. Найдите математическое ожидание числа
 						 сделанных попыток.
 						
 					</script>
@@ -479,7 +505,7 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 				<section data-markdown class="center">
 					<script type="text/template">
 						### Решение
-						По условию вероятность отправки СМС равна 0,05. Это значит, что из 100 попыток отправить СМС в среднем удачными 
+						По условию вероятность отправки СМС равна $\small0.05.$ Это значит, что из 100 попыток отправить СМС в среднем удачными 
 						окажутся 5. То есть, чтобы отправить 1 СМС нужно сделать в среднем 20 попыток. Значит, математическое ожидание числа сделанных попыток равно 20.
 
 					</script>
@@ -493,7 +519,7 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 					<script type="text/template">
 						### Пример
 						Найдите математическое ожидание случайной величины S "число неудач" в серии из 16 испытаний Бернулли с
-						 вероятностью успеха 0,3 в одном испытании.
+						 вероятностью успеха $\small0.3$ в одном испытании.
 						
 					</script>
 				</section>
@@ -503,9 +529,9 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 				<section data-markdown class="center">
 					<script type="text/template">
 						### Решение
-						Вероятность неудачи равна 1 - 0,3 = 0,7. Это значит, что в среднем из 10 испытаний 7 окажутся неудачными. То есть в среднем неудачными
-						 окажутся 7/10 всех испытаний. Соответственно, из 16 испытаний неудачными окажутся 7/10 * 16 = 11,2 испытаний.
-<br>Значит, математическое ожидание случайной величины равна 11,2
+						Вероятность неудачи равна $\small1 - 0.3 = 0.7$. Это значит, что в среднем из 10 испытаний 7 окажутся неудачными. То есть в среднем неудачными
+						 окажутся 7/10 всех испытаний. Соответственно, из 16 испытаний неудачными окажутся $\small7/10 \cdot 16 = 11.2$ испытаний.
+<br>Значит, математическое ожидание случайной величины равна $\small11.2$
 					</script>
 				</section>
 
@@ -528,9 +554,9 @@ https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js
 				<section data-markdown class="center">
 					<script type="text/template">
 						### Решение
-						Математическое ожидание  числа очков, выпавших на игральной кости при каждом броске равно 3,5. 
+						Математическое ожидание  числа очков, выпавших на игральной кости при каждом броске равно $\small3.5$. 
 						Математическое ожидание суммы выпавших очков равно сумме математических ожиданий числа очков при каждом броске. Это значит, 
-						что математическое ожидание суммы выпавших очков равно 3,5 * 5 = 17,5.
+						что математическое ожидание суммы выпавших очков равно $\small3.5 \cdot 5 = 17.5$.
 					</script>
 				</section>
 
